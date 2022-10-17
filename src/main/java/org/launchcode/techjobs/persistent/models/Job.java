@@ -10,12 +10,8 @@ import java.util.List;
         @ManyToOne
         private Employer employer;
 
-        @Id
-        @GeneratedValue
-        private int id;
         @ManyToMany
         private List<Skill> skills = new ArrayList<>();
-        private String name;
 
 
         public Job() {
@@ -29,13 +25,6 @@ import java.util.List;
 
             // Getters and setters.
 
-            public String getName() {
-                return name;
-            }
-
-            public void setName(String name){
-                this.name = name;
-            }
 
                 public Employer getEmployer() {
                 return employer;
